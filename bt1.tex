@@ -1,0 +1,238 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{vietnam}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\begin{document}
+\begin{flushleft}
+	Họ và tên: Văn Thị Kim Khánh
+
+
+	Mã SV: 21E1020015
+
+
+	Lớp: KHDL \&\ TTNT - K2
+\end{flushleft}
+\begin{center}
+		HỌC TĂNG CƯỜNG
+		
+		
+		Bài tập 1
+\end{center}
+\textbf{Câu 1: Xác suất có điều kiện}
+
+
+Trong thí nghiệm gieo hai quân xúc xắc có 6 mặt đồng chất. Biết rằng các mặt xuất hiện trên hai quân không giống nhau.
+
+
+(a) Xác định không gian xác suất.
+
+
+(b) Tính xác suất một trong hai quân ra mặt có 6 điểm.
+
+
+\textbf{Bài giải}
+
+
+(a) Không gian mẫu khi gieo hai quân xúc xắc và các mặt trên hai quân không giống nhau.
+
+Các cặp thỏa mãn điều kiện là (1,2);(1,3);(1,4);...;(6,5)
+
+
+Số phần tử của không gian mẫu là : (6x6)-6=30
+
+(b) Gọi A là sự kiện "một trong hai quân xuất hiện mặt có 6 điểm"
+
+
+Các cặp thỏa mãn điều kiện là:(6,1);(6,2);(6,3);(6,4);(6,5);(1,6);(2,6);(3,6);(4,6);(5,6)
+
+
+Số phần tử của biến cố A là 10
+
+
+Vậy xác suất của biến cố A là:
+\[
+P(A) = \frac{|A|}{|\Omega|} = \frac{10}{30} = \frac{1}{3}
+\]
+
+
+\textbf{Câu 2: Xác suất có điều kiện}
+
+
+Thông thường một đồng xu có hai mặt, giả định rằng một mặt có ký hiệu là N và mặt còn lại có ký hiệu là S. Tuy nhiên, có ba đồng xu đặc biệt. Đồng xu thứ nhất có hai mặt đều có ký tự S, đồng xu thứ hai có cả hai mặt đều là ký tự N, đồng xu thứ ba có một mặt là S một mặt là N. Chọn ngẫu nhiên một đồng xu từ ba đồng xu nói trên để tung, và nhận được mặt có ký tự là N.
+
+
+(a) Tính xác suất mặt còn lại là S.
+
+\textbf{Bài giải}
+
+Giả sử chọn ngẫu nhiên một trong ba đồng xu:
+\begin{itemize}
+	\item Đồng xu thứ nhất: Hai mặt là S.
+	\item Đồng xu thứ hai: Hai mặt là N.
+	\item Đồng xu thứ ba: Một mặt là S, một mặt là N.
+\end{itemize}
+
+Gọi A là biến cố nhận được mặt N sau khi tung đồng xu, chúng ta cần tính xác suất mặt còn lại là S.
+
+Xác suất chọn mỗi đồng xu là \( \frac{1}{3} \). Xác suất xảy ra biến cố A khi chọn đồng xu thứ hai là 1, và khi chọn đồng xu thứ ba là \( \frac{1}{2} \). 
+
+Tính xác suất \( P(A) \):
+\[
+P(A) = \frac{1}{3} \cdot 1 + \frac{1}{3} \cdot \frac{1}{2} = \frac{1}{3} + \frac{1}{6} = \frac{1}{2}
+\]
+
+Xác suất mặt còn lại là S khi mặt đã xuất hiện là N chỉ xảy ra với đồng xu thứ ba:
+\[
+P(S | A) = \frac{P(A | S) P(S)}{P(A)} = \frac{\frac{1}{3} \cdot \frac{1}{2}}{\frac{1}{2}} = \frac{1}{3}
+\]
+
+\textbf{Câu 3: Biến cố độc lập có điều kiện}
+
+Gọi A, B, C lần lượt là ba biến cố độc lập trong một không gian xác suất. Biết rằng \( P(C) > 0 \).
+
+(a) Chứng minh rằng 
+\[
+P(A \cap B \mid C) = P(A \mid C) \cdot P(B \mid C).
+\]
+
+\textbf{Bài giải}
+
+
+Ta có
+\[
+P(A | C) = \frac{P(A \cap C)}{P(C)} \quad \text{và} \quad P(B | C) = \frac{P(B \cap C)}{P(C)}
+\]
+
+Theo định nghĩa xác suất có điều kiện
+\[
+P(A \cap B | C) = \frac{P(A \cap B \cap C)}{P(C)}
+\]
+
+Vì \(A, B, C\) là các biến cố độc lập
+\[
+P(A \cap B \cap C) = P(A) P(B) P(C)
+\]
+
+
+
+Suy ra
+\[
+P(A \cap B | C) = \frac{P(A) P(B) P(C)}{P(C)} = P(A) P(B) = P(A | C) P(B | C)
+\]
+
+
+
+\textbf{Câu 4: Tính PMF từ CDF}
+
+
+Biết X là biến ngẫu nhiên rời rạc với hàm phân phối tích lũy (CDF) được định nghĩa như sau:
+
+\[
+F_X(x) = P(X \leq x) = 
+\begin{cases} 
+	0, & x < 0 \\
+	1/2, & 0 \leq x < 1 \\
+	1, & 1 \leq x < \infty 
+\end{cases}
+\]
+
+
+(a) Xác định \( p_X(x) \), \( x = 0, 1 \).
+
+
+\textbf{Bài giải}
+
+
+
+
+Hàm khối xác suất (PMF) được xác định là:
+\[
+p_X(x) = P(X = x)
+\]
+
+
+
+
+Với \(x = 0\):
+\[
+p_X(0) = F_X(0) - \lim_{x \to 0^-} F_X(x) = \frac{1}{2} - 0 = \frac{1}{2}
+\]
+
+
+
+
+Với \(x = 1\):
+\[
+p_X(1) = F_X(1) - \lim_{x \to 1^-} F_X(x) = 1 - \frac{1}{2} = \frac{1}{2}
+\]
+
+
+
+
+\textbf{Câu 5: Biến ngẫu nhiên liên tục}
+
+
+Biết \(X\) là biến ngẫu nhiên liên tục với hàm phân phối xác suất (PDF) được định nghĩa như sau:
+\[
+f_X(x) = 
+\begin{cases} 
+	c(4x - 2x^2), & 0 < x < 2 \\
+	0, & x \notin (0, 2) 
+\end{cases}
+\]
+
+(a) Xác định \(c\).
+
+(b) Tính \( P\left(\frac{1}{2} < X < \frac{3}{2}\right) \).
+
+\textbf{Bài giải}
+
+(a) Do tổng xác suất phải bằng 1:
+\[
+\int_0^2 f_X(x) dx = 1
+\]
+
+
+
+Ta có
+\[
+\int_0^2 c(4x - 2x^2) dx = c \left[\frac{4x^2}{2} - \frac{2x^3}{3}\right]_0^2 = c \left(8 - \frac{16}{3}\right) = c \times \frac{8}{3}
+\]
+
+
+
+Mà
+\[
+c \times \frac{8}{3} = 1 \quad \Rightarrow \quad c = \frac{3}{8}
+\]
+
+
+(b) 
+
+
+\[
+P\left(\frac{1}{2} < X < \frac{3}{2}\right) = \int_{\frac{1}{2}}^{\frac{3}{2}} \frac{3}{8}(4x - 2x^2) dx
+\]
+
+
+
+
+\[
+=\frac{3}{8} \left[\frac{4x^2}{2} - \frac{2x^3}{3}\right]_{\frac{1}{2}}^{\frac{3}{2}}
+= \frac{3}{8} \left[\left( \frac{9}{2} - \frac{54}{24} \right) - \left( \frac{1}{2} - \frac{1}{24} \right)\right]
+\]
+
+
+
+
+
+\[
+=\frac{3}{8} \times \frac{16}{3} 
+=\frac{2}{3}\
+\]
+
+
+
+\end{document}
